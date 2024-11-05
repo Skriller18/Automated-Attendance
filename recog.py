@@ -49,7 +49,7 @@ with open(f"{classname}_{current_date}_Attendance.csv", 'w+', newline="") as f:
                 face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
                 best_match_index = np.argmin(face_distances)
                 if matches[best_match_index]:
-                    name = known_face_names[best_match_index
+                    name = known_face_names[best_match_index]
 
                 face_names.append(name)
                 if name in known_face_names:

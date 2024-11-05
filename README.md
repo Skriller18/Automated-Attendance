@@ -35,3 +35,5 @@ python face_recognition.py
 ```
 
 Once the program has been run and terminated, a CSV file will be generated of the attendance record with the entry timestamp.
+
+## Python version preferred : 3.10.14

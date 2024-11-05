@@ -15,26 +15,23 @@ pip install -r requirements.txt
 ```
 
 Load the images if you have into the faces folder by keeping the name of the image as the name of the label
-
-
-
 ```bash
-npm install
+cd faces
 ```
 
-## Run the development server locally
-
-To test the app locally, run the backend server in the `indri` repository and then run the frontend server in the `indri-ui` repository.
-
-Make sure to set the `NEXT_PUBLIC_TTS_URL` environment variable to the URL of the backend server. You can copy the `.env.example` file to `.env.local` and set the `NEXT_PUBLIC_TTS_URL` environment variable to the URL of the backend server.
-
+Edit the Labels file for the name of the label you want to ID for each photo
 ```bash
-npm run dev
+gedit labels.txt
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the encoding script to get the encoding for each person
+```bash
+python encodings.py
+```
 
-## Deploy on Vercel
+After the encodings are generated, run the Face Recognition Script
+```bash
+python face_recognition.py
+```
 
-1. Run `npm run build`. Make sure the build is successful.
-2. Run `vercel --prod`. This will deploy the app on Vercel.
+Once the program has been run and terminated, a CSV file will be generated of the attendance record with the entry timestamp.

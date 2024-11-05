@@ -13,7 +13,7 @@ known_face_names = []
 
 known_face_encodings = np.load('encodings.npy')
 
-with open('string_array.txt', 'r') as file:
+with open('labels.txt', 'r') as file:
     known_face_names = [line.strip() for line in file]
 
 students = known_face_names.copy()
